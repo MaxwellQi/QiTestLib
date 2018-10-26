@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2A2F9C2182C82F003485A7 /* log4cplus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2A2F9B2182C82F003485A7 /* log4cplus.h */; };
 		AA3189152182B9650058F0C0 /* QiTestLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA31890B2182B9650058F0C0 /* QiTestLib.framework */; };
 		AA31891A2182B9650058F0C0 /* QiTestLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3189192182B9650058F0C0 /* QiTestLibTests.m */; };
 		AA31891C2182B9650058F0C0 /* QiTestLib.h in Headers */ = {isa = PBXBuildFile; fileRef = AA31890E2182B9650058F0C0 /* QiTestLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3189272182B9B80058F0C0 /* QiCalc.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3189252182B9B70058F0C0 /* QiCalc.h */; };
-		AA3189282182B9B80058F0C0 /* QiCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3189262182B9B80058F0C0 /* QiCalc.m */; };
+		AA3189282182B9B80058F0C0 /* QiCalc.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA3189262182B9B80058F0C0 /* QiCalc.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA2A2F9B2182C82F003485A7 /* log4cplus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log4cplus.h; sourceTree = "<group>"; };
 		AA31890B2182B9650058F0C0 /* QiTestLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QiTestLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA31890E2182B9650058F0C0 /* QiTestLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiTestLib.h; sourceTree = "<group>"; };
 		AA31890F2182B9650058F0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		AA3189192182B9650058F0C0 /* QiTestLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiTestLibTests.m; sourceTree = "<group>"; };
 		AA31891B2182B9650058F0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3189252182B9B70058F0C0 /* QiCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiCalc.h; sourceTree = "<group>"; };
-		AA3189262182B9B80058F0C0 /* QiCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiCalc.m; sourceTree = "<group>"; };
+		AA3189262182B9B80058F0C0 /* QiCalc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QiCalc.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,9 @@
 		AA31890D2182B9650058F0C0 /* QiTestLib */ = {
 			isa = PBXGroup;
 			children = (
+				AA2A2F9B2182C82F003485A7 /* log4cplus.h */,
 				AA3189252182B9B70058F0C0 /* QiCalc.h */,
-				AA3189262182B9B80058F0C0 /* QiCalc.m */,
+				AA3189262182B9B80058F0C0 /* QiCalc.mm */,
 				AA31890E2182B9650058F0C0 /* QiTestLib.h */,
 				AA31890F2182B9650058F0C0 /* Info.plist */,
 			);
@@ -101,6 +104,7 @@
 			files = (
 				AA31891C2182B9650058F0C0 /* QiTestLib.h in Headers */,
 				AA3189272182B9B80058F0C0 /* QiCalc.h in Headers */,
+				AA2A2F9C2182C82F003485A7 /* log4cplus.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3189282182B9B80058F0C0 /* QiCalc.m in Sources */,
+				AA3189282182B9B80058F0C0 /* QiCalc.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +363,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.QiTestLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -384,6 +389,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "-lc++";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ucloud.QiTestLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

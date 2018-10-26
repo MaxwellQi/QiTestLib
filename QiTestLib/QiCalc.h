@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#ifndef UCLOUD_IOS
+#define UCLOUD_IOS
+#endif
+
 @interface QiCalc : NSObject
 
 + (int)addA:(int)a andB:(int)b;
